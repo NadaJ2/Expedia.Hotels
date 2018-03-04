@@ -1,17 +1,52 @@
 ﻿@model ResponseHotel;
 
 @foreach (var hotel in Model.Offers.Hotel) {
-    <div class="col-md-6 theme-box">
-        <a href="@Uri.UnescapeDataString(hotel.HotelUrls.HotelSearchResultUrl)">
-            <img src="@hotel.HotelInfo.HotelImageUrl" alt="Reveal Bootstrap Theme" data-was-processed="true">
-        </a>
-        <div class="clearfix">
-            <h4>
-                <a href="@Uri.UnescapeDataString(hotel.HotelUrls.HotelInfositeUrl)" rel="bookmark">@hotel.HotelInfo.HotelName</a>
-            </h4>
-            <div class="publish-date">1,879 Downloads</div>
+    <div class="col-md-10 col-md-offset-1 theme-box">
+        <div class="col-md-3 img-dim">
+            <a href="@Uri.UnescapeDataString(hotel.HotelUrls.HotelSearchResultUrl)">
+                <img src="@hotel.HotelInfo.HotelImageUrl" alt="Reveal Bootstrap Theme" data-was-processed="true">
+            </a>
         </div>
-        <p class="hotel-Info">@hotel.Destination.Country, @hotel.Destination.City, @hotel.Destination.ShortName</p>
+        <div class="col-md-6 padding-left-30">
+            <div class="hotel-title">
+                <h4 class="pull ">
+                    <a href="@Uri.UnescapeDataString(hotel.HotelUrls.HotelInfositeUrl)" rel="bookmark">@hotel.HotelInfo.HotelName</a>
+                </h4>
+            </div>
+            <div class="col-md-6">
+                <p class="hotel-Info">@hotel.HotelInfo.HotelDestination</p>
+                @if (hotel.HotelInfo.VipAccess) {
+                    <p>
+                        <img class="vipBadgeRebranded" aria-hidden="true" src="http://rallyemotors-hyundai.ca/wp-content/themes/alpha-dark/css/images/form-vip-logo.png" alt="+VIP Access hotel with special benefits">
+                    </p>
+                }
+            </div>
+        </div>
+        <div class="col-md-3" href="@Uri.UnescapeDataString(hotel.HotelUrls.HotelInfositeUrl)">
+            <div class="publish-date rating-padding">
+                <span>Rating: @hotel.HotelInfo.HotelStarRating/5</span>
+                <br />
+                <span>
+                    <a href="@Uri.UnescapeDataString(hotel.HotelUrls.HotelInfositeUrl)" rel="bookmark"> (@hotel.HotelInfo.HotelGuestReviewRating reviews)</a>
+                </span>
+            </div>
+            <br />
+            <div class="col-md-12 pricing">
+                <div class="col-sm-4">
+                    @if (!hotel.HotelPricingInfo.OriginalPricePerNight.Equals(hotel.HotelPricingInfo.CrossOutPriceValue)) {
+                        <s class="control-label">@hotel.HotelPricingInfo.CrossOutPriceValue </s>
+                    }
+                </div>
+                <div class="col-md-8">
+                    <span class="control-label">
+                        @hotel.HotelPricingInfo.OriginalPricePerNight @hotel.HotelPricingInfo.Currency
+                    </span>
+                </div>
+                <div class="col-md-6 pull-right">
+                    <span class="publish-date">avg/night</span>
+                </div>
+            </div>
+        </div>
     </div>
 }
 
