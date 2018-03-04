@@ -1,0 +1,22 @@
+﻿@model ResponseHotel;
+
+@foreach (var hotel in Model.Offers.Hotel) {
+    <div class="col-md-6 theme-box">
+        <a href="@Uri.UnescapeDataString(hotel.HotelUrls.HotelSearchResultUrl)">
+            <img src="@hotel.HotelInfo.HotelImageUrl" alt="Reveal Bootstrap Theme" data-was-processed="true">
+        </a>
+        <div class="clearfix">
+            <h4>
+                <a href="@Uri.UnescapeDataString(hotel.HotelUrls.HotelInfositeUrl)" rel="bookmark">@hotel.HotelInfo.HotelName</a>
+            </h4>
+            <div class="publish-date">1,879 Downloads</div>
+        </div>
+        <p class="hotel-Info">@hotel.Destination.Country, @hotel.Destination.City, @hotel.Destination.ShortName</p>
+    </div>
+}
+
+@if (!Model.Offers.Hotel.Any()) {
+    <div>
+        <span>No Hotel Offers Found!</span>
+    </div>
+}

@@ -1,0 +1,66 @@
+﻿<div class="box">
+    <div id="loadingDiv"></div>
+    <div class="box-header with-border">
+        <h3 class="box-title">Hotels</h3>
+    </div>
+    <div class="box-body shadow-background">
+        <br />
+        <div class="row row-margin-10">
+            <div class="col-md-4 form-group">
+                <label>Destination Name</label>
+                <input id="destinationName" type="text" class="form-control" placeholder="Enter ...">
+            </div>
+            <div class="col-md-4 form-group">
+                <label>Destination City</label>
+                <input id="destinationCity" type="text" class="form-control" placeholder="Enter ...">
+            </div>
+            <div class="col-md-4 form-group">
+                <label>Length Of Stay</label>
+                <input id="lengthOfStay" type="number" class="form-control" placeholder="Enter ...">
+            </div>
+        </div>
+        <div class="row row-margin-10">
+            <div class="col-md-4 form-group">
+                <label>Min Trip Start Date</label>
+                <input id="minTripStartDate" type="date" class="form-control" placeholder="Enter ...">
+            </div>
+            <div class="col-md-4 form-group">
+                <label>Max Trip Start Date</label>
+                <input id="maxTripStartDate" type="date" class="form-control" placeholder="Enter ...">
+            </div>
+        </div>
+        <div class="row row-margin-10">
+            <div class="col-md-3 form-group">
+                <label>Max Star Rating</label>
+                <input id="maxStarRating" onchange="UpdateTitle(this)" type="range" min="0" max="5" step="1" class="form-control">
+            </div>
+            <div class="col-md-3 form-group">
+                <label>Min Star Rating</label>
+                <input id="minStarRating" type="range" onchange="UpdateTitle(this)" min="0" max="5" step="1" class="form-control">
+            </div>
+            <div class="col-md-3 form-group">
+                <label>Max Total Rate</label>
+                <input id="maxTotalRate" type="range" onchange="UpdateTitle(this)" class="form-control">
+            </div>
+            <div class="col-md-3 form-group">
+                <label>Min Total Rate</label>
+                <input id="minTotalRate" type="range" onchange="UpdateTitle(this)" class="form-control">
+            </div>
+        </div>
+        <div class="row row-margin-10">
+            <div class="col-md-4 form-group">
+                <label>Max Guest Rating</label>
+                <input id="maxGuestRate" type="range" onchange="UpdateTitle(this)" min="0" max="10" step="1" class="form-control">
+            </div>
+            <div class="col-md-4 form-group">
+                <label>Min Guest Rating</label>
+                <input id="minGuestRate" type="range" onchange="UpdateTitle(this)" min="0" max="10" step="1" class="form-control">
+            </div>
+            <div class="col-md-4">
+                <button onclick="Search(event)" class="btn btn-lg btn-warning pull-right btn-margin-17">Search</button>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="box" id="hotelResult"></div>

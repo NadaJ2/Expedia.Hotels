@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Expedia_Hotel", "Expedia_Hotel\Expedia_Hotel.csproj", "{B9DA6837-57CB-4D96-88BD-807456D066FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9DA6837-57CB-4D96-88BD-807456D066FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9DA6837-57CB-4D96-88BD-807456D066FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9DA6837-57CB-4D96-88BD-807456D066FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9DA6837-57CB-4D96-88BD-807456D066FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2CA5B95C-CDED-44B9-AB52-DC41D37E056C}
+	EndGlobalSection
+EndGlobal
