@@ -1,5 +1,4 @@
 The Application built using .Net core 2.0 Framework C# language.
-Getting and Building the Code
 To get and build the code in local sandbox please follow the instruction below:
 
 # Prerequisites:
