@@ -16,7 +16,17 @@ git clone https://github.com/NadaJ2/Expedia.Hotels.git
 2. NuGet packages will already have been restored, so you can switch off auto package restore in Visual Studio.
 
 ### Build from Command line
+ - Open your cmd
+ - To build the application
 ```
-build
+dotnet build
+```
+- To restore the packages
+```
+dotnet restore
+```
+- To run the application, this command will provide you the url to browse via your browser
+```
+dotnet run
 ```
 [more details](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-build?tabs=netcore2x)
