@@ -1,5 +1,6 @@
 ## Build Status
 Stable (master):
+
 [![Build Status](https://travis-ci.org/NadaJ2/Expedia.Hotels.svg?branch=master)](https://travis-ci.org/NadaJ2/Expedia.Hotels)
 
 The Application built using .Net core 2.0 Framework C# language.
